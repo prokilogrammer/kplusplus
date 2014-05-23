@@ -12,6 +12,8 @@ $ROOT/bugPatch - Uploads patches for bug fixes and stores them in a folder. Upda
 $ROOT/bugReport - Report bugs in the base code. Also generates UI to display all submitted bug reports
 $ROOT/bugReport/bugReports - Some sample bug reports uploaded by real users. Data from this file is parsed and displayed to user
 
+$ROOT/Database - Contains the database schema for this website. $ROOT/createDb.php is used to actually create the tables
+
 $ROOT/displayScores - Generate tables that displays scores users
 
 $ROOT/evaluator - A console for admins to evaluate user submissions and submit scores. Administrators were separate from regular users. They had thier own login and special powers :) 
