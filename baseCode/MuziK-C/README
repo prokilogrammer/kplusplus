@@ -1,0 +1,12 @@
+Instructions:
+
+To compile and run the code, open terminal and navigate to the directory where the code resides and do the following:
+	./makescript
+	./basecode aigle.ogg
+
+TROUBLESHOOT:
+*)If you have errors after running the makescript, please check if you have gstreamer0.10 core and the gstreamer0.10 good plugins set installed. You can find further information regarding these in documentation pdf given with this code. For further information visit gstreamer's website(http://www.gstreamer.net/).
+
+*) If the errors persist even after installation of proper gstreamer dependencies, install "libgstreamer0.10-dev". This should correct your problems.
+
+*)If problem still persists, please feel free to mail to SRINATH - srinath@kplusplus.kurukshetra.org.in. Call him at 9444877808
