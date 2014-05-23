@@ -1,0 +1,6 @@
+Language: java
+Summary: Bug Report
+Packages: player
+Description: private int RETRY=3;
+  int retry=RETRY;/* this retry variable is unwanted use for this program */
+

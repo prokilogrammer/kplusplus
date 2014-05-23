@@ -1,0 +1,8 @@
+Language: java
+Summary: test
+Packages: test
+Description: test DO NOT EVALUATE***
+
+if(playlist.size()>0){
+      s=getParameter(\"jorbis.player.playonstartup\");
+      if(s!=null

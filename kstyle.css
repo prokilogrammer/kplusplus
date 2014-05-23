@@ -1,0 +1,216 @@
+html { 
+  padding:0px;
+  margin:0px;
+}
+
+body {
+  background: url('images/grad1.png') repeat;
+  font-size: 12px;
+  font-family: Verdana, Arial, SunSans-Regular, Sans-Serif;
+  color:#564b47;  
+  padding:0px;
+  margin:0px;
+}
+
+p, h2, pre {
+margin: 0px; 
+padding: 5px 20px 5px 20px; 
+}
+
+
+ 
+pre { 
+color: #564b47;
+font-size: 11px;
+background-color:transparent;
+font-family: Monaco, Courier, Monospace;
+}
+
+.alignright {
+margin-top: 0; 
+text-align: right;
+font-size: 10px;
+}
+
+h2 {
+font-size:14px;
+padding-top:10px;
+text-transform: uppercase;
+color: #564b47;
+background-color: transparent;
+	}
+
+
+h1 {
+font-size: 15px;
+font-variant: small-caps;
+text-align: right;
+color: #328aa4;
+background: url('images/grad.gif') repeat;
+padding:5px 15px;
+margin:0px;
+border: 0.5px solid #969595;
+}
+
+
+strong { 
+font-size: 13px;
+}
+
+
+
+#left {
+position: absolute;
+background: #EFEFEF url('images/shad_grad_r.png') repeat-y top right;;
+left: 0px;
+width: 210px;
+color: #564b47;
+margin: 0px 5px; 
+padding: 0px;
+padding-right: 10px;
+}
+
+#left h1{
+		padding:6px; margin:0; border:0;
+		background: #328aa4 ;
+		color: white;
+		font-size:11px;
+		font-weight:bold;
+		border-top: 2px solid black;
+		border-bottom:2px solid black;
+		text-align: center;
+	}
+	
+#content {
+margin: 0px 240px 0px 230px;
+background: #414141 url('images/shad_grad_r.png') repeat-y top right;
+color:#969595;
+padding: 20px 40px 20px 30px;
+height: auto;
+text-align: justify;
+word-spacing: 2px;
+word-wrap: break-word;
+font-size:12px;
+}
+
+#content p
+{
+font-weight: normal;
+color:#969595;
+font-size:14px;
+
+}
+#content p span.blue{font-weight:bold; padding-left: 5px; font-size:14px; font-variant: small-caps; color:#089DEA;}
+
+#right {
+position: absolute;
+right: 0px;        
+width: 240px;
+color: #564b47;
+margin: 0px; 
+padding: 0px;
+}
+#content p span.white{font-weight:bold; background:#414141; color:#fff; font-size:12px;}
+
+#content p span{font-weight:normal; background:#414141; color:#fff; font-size:14px;}
+
+
+#NewsTicker{
+	background: #EFEFEF url('images/shad_grad_r.png') repeat-y top right;
+	width:230px;
+	height:230px;
+	margin:0 auto;
+	padding-right: 10px;
+}
+	#NewsTicker h1{
+		padding:6px; margin:0; border:0;
+		background: #328aa4 ;
+		color: white;
+		font-size:11px;
+		font-weight:bold;
+		border-top: 2px solid black;
+		border-bottom:2px solid black;
+		text-align: center;
+	}
+	#NewsVertical {
+	width: 230px;
+	height: 186px;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	}
+/* Ticker Vertical */
+	#TickerVertical {
+		width: 230px;
+		height: 186px;
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	#TickerVertical li {
+		display: block;
+		width: 218px;
+		color: #333333;
+		text-align: left;
+		font-size: 11px;
+		margin: 0;
+		padding: 6px;
+		float: left;
+	}
+		#TickerVertical li .NewsTitle{
+			display: block;
+			color: #000000;
+			font-size: 12px;
+			font-weight:bold;
+			margin-bottom:6px;
+		}
+		#TickerVertical li .NewsTitle a:link,
+		#TickerVertical li .NewsTitle a:Visited {
+			display: block;
+			color: #000000;
+			font-size: 12px;
+			font-weight:bold;
+			margin-bottom:6px;
+			text-decoration:none;
+		}
+		#TickerVertical li .NewsTitle a:hover {
+			text-decoration:underline;
+		}
+		
+		#TickerVertical li .NewsImg{
+			float:left;
+			margin-right:10px;
+		}
+		#TickerVertical li .NewsFooter{
+			display: block;
+			color: #000000;
+			font-size: 10px;
+			margin:6px 0 14px 0;
+		}
+
+a
+{
+cursor: pointer;
+}
+
+
+#register input.field {
+	border: 1px #1A1A1A solid;
+	background: #464646;
+	margin-right: 5px;
+	margin-top: 4px;
+	color: white;
+	height: 16px;
+}
+
+#register input:focus.field {
+	background: #545454;
+}
+
+#register label
+{
+font-weight:bold; background:#414141; color:#fff; font-size:12px; font-variant: small-caps;
+margin-right: 30px;
+}
+

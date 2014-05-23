@@ -1,0 +1,1 @@
+KPlusPlus is the website of a software development contest that mimics the process used in the open source world. The folder $ROOT/baseCode has a Java code which has some bugs. Participants of this contest have to download this code and fix bugs or add new features to it. Points will be awarded based on the number of fixes, complexity of the fix, usefulness of new feature etc.

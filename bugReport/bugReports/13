@@ -1,0 +1,5 @@
+Language: c
+Summary: GMainLoop *loop has not been destroyed 
+Packages: basecode.c
+Description: the loop GMainLoop *loop has been initialised but not destroyed. This will result in memory being occupied unecessarily.
+

@@ -1,0 +1,4 @@
+Language: c
+Summary: Player not exiting
+Packages: 
+Description: The loop \"g_main_loop_run (loop);\" is not exiting. It is going into a infinite loop with the message \"Wait patiently for the program to terminate after the file is played.\" left in the terminal.

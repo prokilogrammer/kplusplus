@@ -1,0 +1,8 @@
+Language: java
+Summary: Bug Report
+Packages: player
+Description: boolean playonstartup=false;
+
+ if(playlist.size()>0){
+      s=getParameter(\"jorbis.player.playonstartup\");
+      if(s!=null

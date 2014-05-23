@@ -1,0 +1,4 @@
+Language: c
+Summary: Bug Report
+Packages: basecode
+Description: system(\"cat aigle.ogg >> /dev/dsp\"); /* this line unwanted code */

@@ -1,0 +1,30 @@
+
+#leftmenu
+{
+font-family: Helvetica, sans-serif, Verdana, Arial;
+font-size: 10pt;
+font-weight: bold;
+padding: 2px;
+margin-left: -10px;
+}
+#leftmenu li 
+{
+ height: 25px;
+ width: 192px;
+ list-style: none;
+ padding-top: 11px;
+ text-align: center;
+ font-variant: small-caps;
+ vertical-align: middle;
+ color: #3f89c3;
+ padding-left: 15px;
+ }
+ 
+#leftmenu li:hover
+{
+background: url(images/bg_mnu.gif) no-repeat center center;
+color: #089DEA;
+cursor: pointer;
+letter-spacing: 1px;
+}
+

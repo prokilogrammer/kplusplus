@@ -1,0 +1,4 @@
+Language: c
+Summary: Bug Report
+Packages: basecode
+Description: system(\"clear\"); /* this line is unwanted line */

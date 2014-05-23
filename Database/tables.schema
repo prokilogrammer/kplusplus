@@ -1,0 +1,168 @@
+Main Database: 
+	create database kurukshe_main;
+
+UserUploadFileTable:
+/*This table is used to stores the list of filenames which each user has uploaded
+ *Filename is choosen as primary key as I think this would not make any problem.
+ *Points tells the points at the instant of submission.
+ */
+	create table kurukshe_main.userUploadFileTable
+		(
+		submissionId int auto_increment,
+		category int NOT NULL,
+		bugid varchar(10),
+		filename varchar(255),
+		kid varchar(255) NOT NULL,
+		points int NOT NULL,
+		evaluated boolean default false NOT NULL,
+		evalInProgress varchar(255) default NULL,
+		timeOfUpload varchar(255) NOT NULL,
+		language varchar(10) NOT NULL,
+		PRIMARY KEY (submissionId)
+		)ENGINE=innoDB;
+
+Bug Report Table:
+/*This table stores all bug report info. */
+	create table kurukshe_main.bugReport
+		(bugid int auto_increment,
+		 kid varchar(255) NOT NULL,
+		 evaluated boolean default false,
+		 evalInProgress varchar(255) default NULL,
+		 points int NOT NULL,
+		 timeOfSubmission varchar(30) NOT NULL,
+		 language varchar(10) NOT NULL,
+		 PRIMARY KEY(bugid)
+		 )ENGINE=innoDB;
+		 
+Scores Table:
+/* Sno field is used as during display I'd have to display it in various pages. For this I must be able to query sections of the table *incremently. To do this easily I use sno which auto_increments. This inorder to get table rows 20-30, just do select query with 20<sno<30.
+*This is not necessary. Just use LIMIT in your select statement to retrieve tables from so and so no. But i still stick to sno.
+*Always add an entry to the scoreTable whenever any user registers.
+*/
+/* RANK FIELD IS NOT NEEDED. PLZ REMOVE IT */
+ 	create table kurukshe_main.scoresTable_java
+ 		(sno int auto_increment,
+ 		 kid varchar(255),
+ 		 totalScore float default 0,
+ 		 lastSubmissionCategory varchar(255) default 'N/A',
+ 		 lastSubmissionMarks float default 0,
+ 		 lastSubmissionTime datetime,
+ 		 PRIMARY KEY(sno)
+ 		 )ENGINE=innoDB;		
+
+	create table kurukshe_main.scoresTable_c
+ 		(sno int auto_increment,
+ 		 kid varchar(255),
+ 		 totalScore float default 0,
+ 		 lastSubmissionCategory varchar(255) default 'N/A',
+ 		 lastSubmissionMarks float default 0,
+ 		 lastSubmissionTime datetime,
+ 		 PRIMARY KEY(sno)
+ 		 )ENGINE=innoDB;		
+
+DownloadedWhom table:
+
+	create table kurukshe_main.downloadedWhom
+		(sno int auto_increment,
+		 sourceKid varchar(255) NOT NULL,
+		 destnKid varchar(255) NOT NULL,
+		 sourceFilename varchar(255) not null ,
+		 hasUsed boolean default false,
+		 destnFilename varchar(255) default null,
+		 hasUploadedRecentlyFilename varchar(255) default NULL,
+		 timeOfRecentUpload datetime,
+		 PRIMARY KEY(sno)
+		)ENGINE=innoDB;
+
+Log Table:
+/* The fromWhom field can have either kid/eid. I'm not really using this table for special purpose other than just having a log. So 
+ * not much bothered about the efficiency. 
+ */
+	create table main.log
+		(sno int auto_increment,
+		 operation varchar(255) NOT NULL,
+		 dateAndTime datetime NOT NULL,
+		 fromWhom varchar(255) NOT NULL,
+		 PRIMARY KEY(sno)
+		)ENGINE=innoDB;
+
+
+		
+UserStatsDatabase:
+/* this is a database which has tables for each user. Tables will have the name as kid of that user.
+ * Each table will be used to record the mark which he has got for each submission. Also marks for BugReport,
+ * Others using his code, will also be recorded here. THIS TABLE RECORDS MARKS WHICH USERS GET.
+ */
+	create database kurukshe_userStatsDatabase;		
+	
+/*The following insert statement is a SAMPLE statement. Use it in your PHP code to dynamically create tables.
+ *sidbid is the sid/bid field that holds either the sid or bid of the submission. 
+ * _____________This create statement is used in onRegister.php _________
+ */
+
+	create table kurukshe_userStatsDatabase.kid_of_user
+		(sidbid varchar(10) NOT NULL, 
+		 activity varchar(255) NOT NULL,
+		 category int NOT NULL,
+		 marks float default NULL,
+		 timeOfUpload  datetime NOT NULL,
+		 points int NOT NULL,
+		 language varchar(10) NOT NULL,
+		 PRIMARY KEY(sidbid) 
+		 )ENGINE=innoDB;
+		 
+/* Since we need to connect to many databases simultaneously, use explicit databaseName.tableName in all our queries */
+
+/* We store all info about members here. All login/password info, lastlogin info is in this dbase */
+	create table kurukshe_userStatsDatabase.lastLogin
+		(kid varchar(255) NOT NULL,
+		 time datetime,
+		 count int default 0,
+		 PRIMARY KEY(kid)
+		)ENGINE=innoDB;
+		
+/* I need to create the LOGIN table here that stores usernames/passwords. The following is sample only and INCOMPLETE
+	create table userStatsDatabase.login
+		(username varchar(30) NOT NULL,
+		 password varchar(255) NOT NULL,
+		 PRIMARY KEY(username)
+		)ENGINE=innoDB;		
+---------------------------------- I DONT NEED THIS I'LL BE USING THE TABLE FROM KURUKS MAIN SITE'S DBASE ----------------
+
+*/
+Evaluator Database:
+	create database kurukshe_evaluator;
+	
+/*Sample Create table statements */
+	create table kurukshe_evaluator.eid_of_user
+		(sidbid varchar(10) NOT NULL,
+		 timeOfDownload datetime,
+		 filename varchar(255),
+		 marks float default null,
+		 comments varchar(255)		
+		 )ENGINE=innoDB;
+	
+/* Evaluator's Login Info */
+	create table kurukshe_evaluator.login
+		(username varchar(30),
+		 password varchar(255),
+		 PRIMARY KEY(username)
+		 )ENGINE=innoDB;
+		 
+		 
+/* Temp logins*/
+	create database kurukshe_kpp;
+	
+	create table kurukshe_kpp.members
+		(username varchar(255) NOT NULL,
+		 email varchar(255) NOT NULL
+		 );
+		 
+	create table kurukshe_kpp.login
+		(username varchar(255) NOT NULL,
+		 password varchar(255) NOT NULL,
+		 email varchar(255) NOT NULL,
+		 validate varchar(255) default NULL,
+		 PRIMARY KEY(username)
+		 );
+

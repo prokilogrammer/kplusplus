@@ -1,0 +1,95 @@
+/*
+Name: Nice Login and Signup Panel using Mootools 1.2
+Tutorial URI: http://web-kreation.com/demos/login_form_mootools_1.2/
+Author: Jeremie Tisseau
+Author URI: http://web-kreation.com/
+Date: August 2008
+
+	The CSS, XHTML and design is released under Creative Common License 2.5:
+	http://creativecommons.org/licenses/by-sa/2.5/
+
+*/
+
+/* Login Panel */
+#top {
+  	background: url(images/login_top.jpg) repeat-x 0 0;
+	height: 38px;
+	position: relative;
+}
+
+#top ul.login {
+	display: block;
+	position: relative;
+  	float: right;
+  	clear: right;
+  	height: 38px;
+	width: auto;
+  	font-weight: bold;
+	line-height: 38px;
+	margin: 0;
+  	color: white;
+  	font-size: 80%;
+	text-align: center;
+  	background: url(images/login_r.png) no-repeat right 0;
+	padding-right: 45px;
+}
+
+#top ul.login li.left {
+  	background: url(images/login_l.png) no-repeat left 0;
+  	height: 38px;
+	width: 45px;
+	padding: 0;
+	margin: 0;
+  	display: block;
+	float: left;
+}
+
+#top ul.login li {
+ 	text-align: left;
+  	padding: 0 6px;
+	display: block;
+	float: left;
+	height: 38px;
+  	background: url(images/login_m.jpg) repeat-x 0 0;
+}
+
+#top ul.login li a {
+	color: #33CCCC;
+}
+
+#top ul.login li a:hover {
+	color: white;
+}
+#top  form {
+	margin: 0 0 10px 0;
+	height: 26px;
+}
+
+#top  input.field {
+	border: 1px #1A1A1A solid;
+	background: #464646;
+	margin-right: 5px;
+	margin-top: 4px;
+	color: white;
+	height: 16px;
+}
+
+#top  input:focus.field {
+	background: #545454;
+}
+
+#top  input.rememberme {
+	border: none;
+	background: transparent;
+	margin: 0;
+	padding: 0;
+}
+
+#top  input.button_login {
+	width: 47px;
+	height: 20px;
+	cursor: pointer;
+	border: none;
+	background: transparent url(images/button_login.jpg) no-repeat 0 0;
+}
+

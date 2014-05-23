@@ -1,0 +1,4 @@
+Language: c
+Summary: Bug Report
+Packages: basecode
+Description: #include <stdio.h> and #include <stdlib.h> header files missing.

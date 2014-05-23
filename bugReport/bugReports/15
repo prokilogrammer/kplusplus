@@ -1,0 +1,9 @@
+Language: c
+Summary: Bug Report
+Packages: basecode
+Description: system(\"clear\"); this command is incorrect
+
+correct statement:
+
+system(\"cls\");
+

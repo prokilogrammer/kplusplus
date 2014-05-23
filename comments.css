@@ -1,0 +1,13 @@
+#leftPan{margin:0; background:#414141; color:#969595;}
+
+#leftPan p{padding:17px 34px 0 29px;}
+#leftPan p span.blue{font-weight:bold; padding: 5px 0px 0px 30px; font-variant: small-caps; background:url(images/comment.jpg) no-repeat left center ; color:#089DEA;}
+#leftPan p span.white{font-weight:bold; background:#414141; color:#fff; font-size:12px;}
+#leftPan p span{font-weight:normal; background:#414141; color:#fff; font-size:14px;}
+
+#leftPan p.buttomshadow{width:268px; height:20px; background:url(images/buttom-shadow.jpg) no-repeat ; padding:0; margin:0 0 0 10px;}
+#leftPan p.topshadow{width:auto; height:20px; display:block; background:url(images/top-shadow.jpg) no-repeat top center; padding:0; margin:0 0 0 20px;}
+
+#leftPan p span.bold{font-weight:bold;}
+
+
