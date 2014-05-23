@@ -1,5 +1,8 @@
-KPlusPlus is the website of a software development contest that mimics the process used in the open source world. The folder $ROOT/baseCode has the code for a music player with some some bugs. Participants of this contest have to download this code, fix bugs and/or add new features and upload it. Points will be awarded based on the number of fixes, complexity of the fix, usefulness of new feature etc. This contest was active for around two months. As far as I remember, around 500 users participated in it. Here is a walk-through of the code:
+KPlusPlus is the website of a software development contest that mimics the process used in the open source world. The folder $ROOT/baseCode has the code for a music player with some some bugs. Participants of this contest have to download this code, fix bugs and/or add new features and upload it. Points will be awarded based on the number of fixes, complexity of the fix, usefulness of new feature etc. This contest was active for around two months. As far as I remember, around 500 users participated in it. 
+
 Live site (databases not setup. so not fully operational): http://kplusplus.herokuapp.com/
+
+Here is a walk-through of the code:
 
 $ROOT/baseCode - C and Java code for a simple music player. I wrote the C code while someone else wrote the Java code. 
 $ROOT/baseCode/MuziK-C - Simple ogg player written in C to work Linux. This has few obvious bugs that users need to report and fix.
